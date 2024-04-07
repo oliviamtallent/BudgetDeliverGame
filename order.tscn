@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=3 uid="uid://bcglsw1h6a7kv"]
+
+[ext_resource type="Script" path="res://order.gd" id="1_nfjhm"]
+[ext_resource type="Texture2D" uid="uid://dhca46ivphido" path="res://src/box.png" id="1_oands"]
+[ext_resource type="Texture2D" uid="uid://xom5y24bndij" path="res://src/apple.png" id="2_kwe6f"]
+[ext_resource type="FontFile" uid="uid://cwm6cj4w31np7" path="res://fonts/Notable/Notable-Regular.ttf" id="3_iaukp"]
+[ext_resource type="Texture2D" uid="uid://6n4idqik4s4l" path="res://src/exclaim.png" id="4_ptprd"]
+[ext_resource type="Texture2D" uid="uid://bk43ogfscrc5l" path="res://src/checkcircle.png" id="5_rr5nc"]
+[ext_resource type="Texture2D" uid="uid://dkqme8m2ccn06" path="res://src/x.png" id="6_eys0e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_88t6h"]
+font = ExtResource("3_iaukp")
+font_size = 50
+font_color = Color(0, 0.580392, 0.545098, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jyt13"]
+radius = 94.0213
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f8faw"]
+radius = 75.1332
+
+[node name="Order" type="Node2D"]
+script = ExtResource("1_nfjhm")
+
+[node name="OrderBoxNode" type="Node2D" parent="."]
+visible = false
+
+[node name="OrderBox" type="Sprite2D" parent="OrderBoxNode"]
+texture = ExtResource("1_oands")
+
+[node name="Apple" type="Sprite2D" parent="OrderBoxNode"]
+position = Vector2(-63, -158)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_kwe6f")
+
+[node name="AmountLabel" type="Label" parent="OrderBoxNode"]
+offset_left = 33.0
+offset_top = -193.0
+offset_right = 106.0
+offset_bottom = -124.0
+text = "x5"
+label_settings = SubResource("LabelSettings_88t6h")
+
+[node name="PriceLabel" type="Label" parent="OrderBoxNode"]
+offset_left = -158.0
+offset_top = -85.0
+offset_right = 166.0
+offset_bottom = -16.0
+text = "$5.00"
+label_settings = SubResource("LabelSettings_88t6h")
+horizontal_alignment = 1
+
+[node name="CheckBtn" type="Sprite2D" parent="OrderBoxNode"]
+position = Vector2(-78, 67)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_rr5nc")
+
+[node name="CheckArea" type="Area2D" parent="OrderBoxNode/CheckBtn"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OrderBoxNode/CheckBtn/CheckArea"]
+shape = SubResource("CircleShape2D_jyt13")
+
+[node name="XBtn" type="Sprite2D" parent="OrderBoxNode"]
+position = Vector2(80, 68)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_eys0e")
+
+[node name="XArea" type="Area2D" parent="OrderBoxNode/XBtn"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OrderBoxNode/XBtn/XArea"]
+position = Vector2(-4, 0)
+shape = SubResource("CircleShape2D_jyt13")
+
+[node name="ExclaimNode" type="Node2D" parent="."]
+
+[node name="Exclaim" type="Sprite2D" parent="ExclaimNode"]
+position = Vector2(-10, 186)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_ptprd")
+
+[node name="ExclaimArea" type="Area2D" parent="ExclaimNode"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExclaimNode/ExclaimArea"]
+position = Vector2(-10, 186)
+shape = SubResource("CircleShape2D_f8faw")
+
+[connection signal="input_event" from="OrderBoxNode/CheckBtn/CheckArea" to="." method="_on_check_area_input_event"]
+[connection signal="input_event" from="OrderBoxNode/XBtn/XArea" to="." method="_on_x_area_input_event"]

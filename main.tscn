@@ -1,0 +1,816 @@
+[gd_scene load_steps=44 format=3 uid="uid://2nygc420anss"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_5thy3"]
+[ext_resource type="Texture2D" uid="uid://qwyjsule2vtm" path="res://src/background.png" id="1_o1an4"]
+[ext_resource type="Texture2D" uid="uid://cuofi052qq5gm" path="res://src/trail.png" id="2_e0q5l"]
+[ext_resource type="Texture2D" uid="uid://bno4y1ruxduuo" path="res://src/car_right.png" id="3_ja222"]
+[ext_resource type="Texture2D" uid="uid://d3q7j0m2eb2k8" path="res://src/arrows/arrow_left.png" id="4_38b1e"]
+[ext_resource type="Texture2D" uid="uid://c61h7wyp4rijw" path="res://src/fish_house.png" id="4_mvh5m"]
+[ext_resource type="Texture2D" uid="uid://cwdcsbrhjy0pf" path="res://src/arrows/arrow_right.png" id="5_4amtw"]
+[ext_resource type="Texture2D" uid="uid://do88odw6d0f63" path="res://src/house_1.png" id="5_mwbn0"]
+[ext_resource type="Texture2D" uid="uid://dmysnnwxtr5b5" path="res://src/house_2.png" id="6_f1o0v"]
+[ext_resource type="Texture2D" uid="uid://3mn1e83pesl" path="res://src/arrows/arrow_up.png" id="6_uwbpo"]
+[ext_resource type="Texture2D" uid="uid://ckrfyorahml3x" path="res://src/arrows/arrow_down.png" id="7_hfck7"]
+[ext_resource type="Texture2D" uid="uid://dan5iwdioxh01" path="res://src/gas_station.png" id="7_lcq11"]
+[ext_resource type="Texture2D" uid="uid://6n4idqik4s4l" path="res://src/exclaim.png" id="8_3j8r2"]
+[ext_resource type="Texture2D" uid="uid://dhca46ivphido" path="res://src/box.png" id="10_866f5"]
+[ext_resource type="Texture2D" uid="uid://be6au7bxv3p6m" path="res://src/gas_icon.png" id="11_bnnoe"]
+[ext_resource type="Texture2D" uid="uid://bfilsxubftv0b" path="res://src/top_bar.png" id="12_pqh22"]
+[ext_resource type="FontFile" uid="uid://cwm6cj4w31np7" path="res://fonts/Notable/Notable-Regular.ttf" id="13_pri3t"]
+[ext_resource type="Texture2D" uid="uid://2fpiu5vkqmj2" path="res://src/round_box_button.png" id="13_tu1wp"]
+[ext_resource type="Texture2D" uid="uid://houlyubo4831" path="res://src/Bank.png" id="19_jmcm4"]
+[ext_resource type="Texture2D" uid="uid://cvdw3pp5dopep" path="res://src/house_3.png" id="20_hbxr0"]
+[ext_resource type="Texture2D" uid="uid://bfmiitqrxo4pp" path="res://src/ask.png" id="21_q3k5f"]
+[ext_resource type="Texture2D" uid="uid://c3t75uurasvq2" path="res://src/player_house.png" id="22_idxjj"]
+[ext_resource type="Texture2D" uid="uid://xom5y24bndij" path="res://src/apple.png" id="22_qn1cq"]
+[ext_resource type="Texture2D" uid="uid://i5vm3cd6mswm" path="res://src/arrow_next.png" id="23_hkq8n"]
+[ext_resource type="Texture2D" uid="uid://c34vlejr4mpqf" path="res://src/car_left.png" id="25_bsd53"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odec6"]
+size = Vector2(360, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3fn0p"]
+size = Vector2(533.333, 266.667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxh0i"]
+size = Vector2(284, 308)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cam4x"]
+size = Vector2(240, 270)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrn3y"]
+size = Vector2(262.187, 199.687)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oatg3"]
+radius = 96.8962
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i264x"]
+size = Vector2(245.792, 185.714)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oirrj"]
+radius = 97.0824
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwvhy"]
+size = Vector2(194, 158)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bxdw1"]
+font = ExtResource("13_pri3t")
+font_size = 30
+font_color = Color(0.866667, 0.945098, 0.941176, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1koyf"]
+font = ExtResource("13_pri3t")
+font_size = 60
+font_color = Color(0.866667, 0.945098, 0.941176, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8wuw"]
+size = Vector2(339.286, 110.715)
+
+[sub_resource type="LabelSettings" id="LabelSettings_heaod"]
+font = ExtResource("13_pri3t")
+font_size = 30
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d4cfm"]
+radius = 24.6982
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p06i5"]
+bg_color = Color(0.866667, 0.945098, 0.941176, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_pua3r"]
+font = ExtResource("13_pri3t")
+font_size = 27
+font_color = Color(0.537255, 0.733333, 0.721569, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nx7vw"]
+font = ExtResource("13_pri3t")
+font_size = 20
+font_color = Color(0.537255, 0.733333, 0.721569, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwmxp"]
+size = Vector2(499.999, 260)
+
+[node name="main" type="Node2D"]
+position = Vector2(-46, -11)
+script = ExtResource("1_5thy3")
+
+[node name="BackgroundSolid" type="ColorRect" parent="."]
+process_mode = 4
+offset_left = 48.0
+offset_top = 16.0
+offset_right = 1200.0
+offset_bottom = 658.0
+color = Color(0.866667, 0.945098, 0.941176, 1)
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(623.375, 346)
+scale = Vector2(0.599609, 0.587037)
+texture = ExtResource("1_o1an4")
+
+[node name="Trail" type="Node2D" parent="."]
+
+[node name="Trail1" type="Sprite2D" parent="Trail"]
+position = Vector2(1115, 422)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail2" type="Sprite2D" parent="Trail"]
+position = Vector2(1058, 418)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail3" type="Sprite2D" parent="Trail"]
+position = Vector2(1004, 425)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail4" type="Sprite2D" parent="Trail"]
+position = Vector2(958, 411)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail5" type="Sprite2D" parent="Trail"]
+position = Vector2(908, 395)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail6" type="Sprite2D" parent="Trail"]
+position = Vector2(849, 399)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail7" type="Sprite2D" parent="Trail"]
+position = Vector2(794, 426)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail8" type="Sprite2D" parent="Trail"]
+position = Vector2(770, 387)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail9" type="Sprite2D" parent="Trail"]
+position = Vector2(786, 340)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail10" type="Sprite2D" parent="Trail"]
+position = Vector2(816, 293)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail11" type="Sprite2D" parent="Trail"]
+position = Vector2(859, 255)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail12" type="Sprite2D" parent="Trail"]
+position = Vector2(899, 213)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail13" type="Sprite2D" parent="Trail"]
+position = Vector2(787, 256)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail14" type="Sprite2D" parent="Trail"]
+position = Vector2(740, 224)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail15" type="Sprite2D" parent="Trail"]
+position = Vector2(698, 200)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail16" type="Sprite2D" parent="Trail"]
+position = Vector2(650, 180)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail16" type="Sprite2D" parent="Trail/Trail16"]
+position = Vector2(-1377.5, 1982.5)
+scale = Vector2(1.37, 1.13)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail16" type="Sprite2D" parent="Trail/Trail16/Trail16"]
+position = Vector2(253.649, -462.39)
+scale = Vector2(0.950728, 0.9277)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail16" type="Sprite2D" parent="Trail/Trail16/Trail16/Trail16"]
+position = Vector2(-238.004, -486.502)
+scale = Vector2(0.643664, 0.944198)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail17" type="Sprite2D" parent="Trail"]
+position = Vector2(743, 443)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail18" type="Sprite2D" parent="Trail"]
+position = Vector2(691, 433)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail19" type="Sprite2D" parent="Trail"]
+position = Vector2(638, 450)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail20" type="Sprite2D" parent="Trail"]
+position = Vector2(578, 467)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail21" type="Sprite2D" parent="Trail"]
+position = Vector2(526, 444)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail22" type="Sprite2D" parent="Trail"]
+position = Vector2(472, 438)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail23" type="Sprite2D" parent="Trail"]
+position = Vector2(413, 434)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail24" type="Sprite2D" parent="Trail"]
+position = Vector2(353, 424)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail25" type="Sprite2D" parent="Trail"]
+position = Vector2(295, 430)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail26" type="Sprite2D" parent="Trail"]
+position = Vector2(246, 418)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail33" type="Sprite2D" parent="Trail"]
+position = Vector2(207.9, 452.1)
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail27" type="Sprite2D" parent="Trail"]
+position = Vector2(189, 400)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail34" type="Sprite2D" parent="Trail"]
+position = Vector2(132, 393)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail28" type="Sprite2D" parent="Trail"]
+position = Vector2(537, 495)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail29" type="Sprite2D" parent="Trail"]
+position = Vector2(492, 525)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail30" type="Sprite2D" parent="Trail"]
+position = Vector2(452, 552)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail31" type="Sprite2D" parent="Trail"]
+position = Vector2(406, 588)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="Trail32" type="Sprite2D" parent="Trail"]
+position = Vector2(357, 623)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e0q5l")
+
+[node name="PlayerHouse" type="Sprite2D" parent="."]
+position = Vector2(157, 339)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("22_idxjj")
+
+[node name="PlayerHouseArea" type="Area2D" parent="PlayerHouse"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHouse/PlayerHouseArea"]
+position = Vector2(27.5, 2.5)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_odec6")
+
+[node name="ArrowNext" type="Sprite2D" parent="PlayerHouse"]
+position = Vector2(-122.5, 77.5)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("23_hkq8n")
+
+[node name="ArrrowNextArea" type="Area2D" parent="PlayerHouse/ArrowNext"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHouse/ArrowNext/ArrrowNextArea"]
+position = Vector2(6.10352e-05, 16.6667)
+shape = SubResource("RectangleShape2D_3fn0p")
+
+[node name="House2" type="Sprite2D" parent="."]
+position = Vector2(899, 181)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_f1o0v")
+
+[node name="House2Area" type="Area2D" parent="House2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House2/House2Area"]
+position = Vector2(2, -18)
+shape = SubResource("RectangleShape2D_bxh0i")
+
+[node name="House1" type="Sprite2D" parent="."]
+position = Vector2(1116, 355)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_mwbn0")
+
+[node name="House1Area" type="Area2D" parent="House1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House1/House1Area"]
+position = Vector2(-33.3333, -48.3334)
+shape = SubResource("RectangleShape2D_cam4x")
+
+[node name="BankNode" type="Node2D" parent="."]
+
+[node name="Bank" type="Sprite2D" parent="BankNode"]
+position = Vector2(437.5, 196.813)
+scale = Vector2(0.093006, 0.103089)
+texture = ExtResource("19_jmcm4")
+
+[node name="BankArea" type="Area2D" parent="BankNode/Bank"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BankNode/Bank/BankArea"]
+position = Vector2(11.4233, 138.225)
+scale = Vector2(4.3008, 3.88014)
+shape = SubResource("RectangleShape2D_hrn3y")
+
+[node name="BankExclaim" type="Sprite2D" parent="BankNode"]
+visible = false
+position = Vector2(511, 155)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_3j8r2")
+
+[node name="BankExclaimArea" type="Area2D" parent="BankNode/BankExclaim"]
+position = Vector2(406.667, -116.667)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BankNode/BankExclaim/BankExclaimArea"]
+position = Vector2(-406.667, 116.667)
+shape = SubResource("CircleShape2D_oatg3")
+
+[node name="House3" type="Sprite2D" parent="."]
+position = Vector2(669, 172)
+scale = Vector2(0.34989, 0.312308)
+texture = ExtResource("20_hbxr0")
+
+[node name="House3Area" type="Area2D" parent="House3"]
+position = Vector2(-111.464, -35.2216)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House3/House3Area"]
+position = Vector2(102.89, 51.2315)
+shape = SubResource("RectangleShape2D_i264x")
+
+[node name="Car" type="Sprite2D" parent="."]
+position = Vector2(507, 452)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_ja222")
+
+[node name="Area2D" type="Area2D" parent="Car"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car/Area2D"]
+position = Vector2(-4.99988, 25)
+shape = SubResource("CircleShape2D_oirrj")
+
+[node name="FishShop" type="Sprite2D" parent="."]
+position = Vector2(834, 556)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_mvh5m")
+
+[node name="Area2D" type="Area2D" parent="FishShop"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishShop/Area2D"]
+position = Vector2(-137, -75)
+shape = SubResource("RectangleShape2D_fwvhy")
+
+[node name="GasStationNode" type="Node2D" parent="."]
+
+[node name="GasStation" type="Sprite2D" parent="GasStationNode"]
+position = Vector2(301, 594)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_lcq11")
+
+[node name="GasStationArea" type="Area2D" parent="GasStationNode/GasStation"]
+position = Vector2(-17.5, 7.62939e-05)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GasStationNode/GasStation/GasStationArea"]
+position = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_hrn3y")
+
+[node name="GasExclaim" type="Sprite2D" parent="GasStationNode"]
+visible = false
+position = Vector2(397, 513)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_3j8r2")
+
+[node name="GasExclaimArea" type="Area2D" parent="GasStationNode/GasExclaim"]
+position = Vector2(406.667, -116.667)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GasStationNode/GasExclaim/GasExclaimArea"]
+position = Vector2(-406.667, 120)
+shape = SubResource("CircleShape2D_oatg3")
+
+[node name="GasBox" type="Sprite2D" parent="GasStationNode"]
+visible = false
+position = Vector2(397, 440)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("10_866f5")
+
+[node name="GasIcon" type="Sprite2D" parent="GasStationNode/GasBox"]
+position = Vector2(-15, -112.5)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("11_bnnoe")
+
+[node name="Label" type="Label" parent="GasStationNode/GasBox"]
+offset_left = -22.5
+offset_top = -180.0
+offset_right = 45.5
+offset_bottom = -111.0
+text = "$5"
+label_settings = SubResource("LabelSettings_bxdw1")
+
+[node name="GasButton" type="Sprite2D" parent="GasStationNode/GasBox"]
+position = Vector2(2.5, 77.5)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("13_tu1wp")
+
+[node name="Label" type="Label" parent="GasStationNode/GasBox/GasButton"]
+offset_left = -117.857
+offset_top = -42.8571
+offset_right = 49.1428
+offset_bottom = 39.1429
+text = "Buy!"
+label_settings = SubResource("LabelSettings_1koyf")
+metadata/_edit_use_anchors_ = true
+
+[node name="GasPurchaseArea" type="Area2D" parent="GasStationNode/GasBox/GasButton"]
+position = Vector2(-25, 0.000108991)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GasStationNode/GasBox/GasButton/GasPurchaseArea"]
+position = Vector2(1.78564, -1.78601)
+shape = SubResource("RectangleShape2D_x8wuw")
+
+[node name="Arrows" type="Node2D" parent="."]
+position = Vector2(54, 14)
+
+[node name="ArrowLeft" type="Sprite2D" parent="Arrows"]
+position = Vector2(961, 555)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("4_38b1e")
+
+[node name="Area2D" type="Area2D" parent="Arrows/ArrowLeft"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Arrows/ArrowLeft/Area2D"]
+polygon = PackedVector2Array(-126.667, -26.6667, 120, -160, 166.667, -153.333, 166.667, 140, 133.333, 173.333, -126.667, 20)
+
+[node name="ArrowRight" type="Sprite2D" parent="Arrows"]
+position = Vector2(1075, 557)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("5_4amtw")
+
+[node name="Area2D" type="Area2D" parent="Arrows/ArrowRight"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Arrows/ArrowRight/Area2D"]
+polygon = PackedVector2Array(-120, -186.667, -160, -173.333, -166.667, 113.333, -146.667, 140, -113.333, 133.333, 126.667, 0, 126.667, -53.3333)
+
+[node name="ArrowUp" type="Sprite2D" parent="Arrows"]
+position = Vector2(1018, 499)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_uwbpo")
+
+[node name="Area2D" type="Area2D" parent="Arrows/ArrowUp"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Arrows/ArrowUp/Area2D"]
+polygon = PackedVector2Array(-160, 133.333, 133.333, 140, 166.667, 100, 26.6665, -146.667, -26.6665, -146.667, -160, 93.3335)
+
+[node name="ArrowDown" type="Sprite2D" parent="Arrows"]
+position = Vector2(1017, 608)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("7_hfck7")
+
+[node name="Area2D" type="Area2D" parent="Arrows/ArrowDown"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Arrows/ArrowDown/Area2D"]
+polygon = PackedVector2Array(-133.333, -160, 133.333, -166.667, 173.333, -126.667, 13.333, 126.667, -26.667, 126.667, -173.333, -126.667)
+
+[node name="BarNode" type="Node2D" parent="."]
+
+[node name="Bar" type="Sprite2D" parent="BarNode"]
+position = Vector2(628, 337)
+scale = Vector2(0.580625, 0.575185)
+texture = ExtResource("12_pqh22")
+
+[node name="MoneyLabel" type="Label" parent="BarNode"]
+offset_left = 141.0
+offset_top = 38.0
+offset_right = 261.0
+offset_bottom = 81.0
+text = "$00.00"
+label_settings = SubResource("LabelSettings_heaod")
+metadata/_edit_use_anchors_ = true
+
+[node name="GasLabel" type="Label" parent="BarNode"]
+offset_left = 379.0
+offset_top = 35.0
+offset_right = 499.0
+offset_bottom = 78.0
+text = "5
+"
+label_settings = SubResource("LabelSettings_heaod")
+metadata/_edit_use_anchors_ = true
+
+[node name="AppleLabel" type="Label" parent="BarNode"]
+offset_left = 543.0
+offset_top = 36.0
+offset_right = 663.0
+offset_bottom = 79.0
+text = "5
+"
+label_settings = SubResource("LabelSettings_heaod")
+metadata/_edit_use_anchors_ = true
+
+[node name="Apple" type="Sprite2D" parent="BarNode"]
+position = Vector2(498, 59)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("22_qn1cq")
+
+[node name="Ask" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(843.188, 437.5)
+scale = Vector2(0.13008, 0.125)
+texture = ExtResource("21_q3k5f")
+
+[node name="Ask2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1110, 255)
+scale = Vector2(0.132061, 0.120531)
+texture = ExtResource("21_q3k5f")
+
+[node name="SecretPothole" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SecretPothole"]
+position = Vector2(765, 393)
+shape = SubResource("CircleShape2D_d4cfm")
+
+[node name="Tutorial" type="Node2D" parent="."]
+
+[node name="FirstItem" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Bg" type="Panel" parent="Tutorial/FirstItem"]
+offset_left = 283.0
+offset_top = 202.0
+offset_right = 945.0
+offset_bottom = 462.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p06i5")
+
+[node name="Label" type="Label" parent="Tutorial/FirstItem"]
+offset_left = 297.0
+offset_top = 214.0
+offset_right = 937.0
+offset_bottom = 257.0
+text = "Welcome to Budget Delivery!"
+label_settings = SubResource("LabelSettings_pua3r")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Tutorial/FirstItem"]
+offset_left = 322.0
+offset_top = 278.0
+offset_right = 733.0
+offset_bottom = 483.0
+text = "Begin by driving to the
+bank, to take out a
+ loan to begin your delivery 
+buisness ventures."
+label_settings = SubResource("LabelSettings_nx7vw")
+
+[node name="DoneArrow" type="Sprite2D" parent="Tutorial/FirstItem"]
+position = Vector2(891, 497)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("23_hkq8n")
+
+[node name="DoneArrowArea" type="Area2D" parent="Tutorial/FirstItem/DoneArrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/FirstItem/DoneArrow/DoneArrowArea"]
+position = Vector2(0.000488281, 0)
+shape = SubResource("RectangleShape2D_cwmxp")
+
+[node name="BankIcon" type="Sprite2D" parent="Tutorial/FirstItem"]
+position = Vector2(826, 335)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("19_jmcm4")
+
+[node name="Tutorial5" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Bg" type="Panel" parent="Tutorial/Tutorial5"]
+offset_left = 283.0
+offset_top = 202.0
+offset_right = 945.0
+offset_bottom = 462.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p06i5")
+
+[node name="Label" type="Label" parent="Tutorial/Tutorial5"]
+offset_left = 297.0
+offset_top = 214.0
+offset_right = 937.0
+offset_bottom = 257.0
+text = "you have gas!"
+label_settings = SubResource("LabelSettings_pua3r")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Tutorial/Tutorial5"]
+offset_left = 322.0
+offset_top = 278.0
+offset_right = 733.0
+offset_bottom = 483.0
+text = "Now that you have gas,
+all you need left is apples.
+go to the orchard to 
+collect some."
+label_settings = SubResource("LabelSettings_nx7vw")
+
+[node name="DoneArrow" type="Sprite2D" parent="Tutorial/Tutorial5"]
+position = Vector2(891, 497)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("23_hkq8n")
+
+[node name="DoneArrowArea" type="Area2D" parent="Tutorial/Tutorial5/DoneArrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/Tutorial5/DoneArrow/DoneArrowArea"]
+position = Vector2(0.000488281, 0)
+shape = SubResource("RectangleShape2D_cwmxp")
+
+[node name="BankIcon" type="Sprite2D" parent="Tutorial/Tutorial5"]
+position = Vector2(826, 335)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("22_idxjj")
+
+[node name="Tutorial7" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Bg" type="Panel" parent="Tutorial/Tutorial7"]
+offset_left = 283.0
+offset_top = 202.0
+offset_right = 945.0
+offset_bottom = 462.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p06i5")
+
+[node name="Label" type="Label" parent="Tutorial/Tutorial7"]
+offset_left = 297.0
+offset_top = 214.0
+offset_right = 937.0
+offset_bottom = 257.0
+text = "buisness is beginning!"
+label_settings = SubResource("LabelSettings_pua3r")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Tutorial/Tutorial7"]
+offset_left = 322.0
+offset_top = 278.0
+offset_right = 903.0
+offset_bottom = 483.0
+text = "you are now ready to deliver on your 
+own! Save money, water your trees, and
+make smart financial decisions."
+label_settings = SubResource("LabelSettings_nx7vw")
+
+[node name="DoneArrow" type="Sprite2D" parent="Tutorial/Tutorial7"]
+position = Vector2(891, 497)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("23_hkq8n")
+
+[node name="DoneArrowArea" type="Area2D" parent="Tutorial/Tutorial7/DoneArrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/Tutorial7/DoneArrow/DoneArrowArea"]
+position = Vector2(0.000488281, 0)
+shape = SubResource("RectangleShape2D_cwmxp")
+
+[node name="PotHoleMsg" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Bg" type="Panel" parent="Tutorial/PotHoleMsg"]
+offset_left = 283.0
+offset_top = 202.0
+offset_right = 945.0
+offset_bottom = 462.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p06i5")
+
+[node name="Label" type="Label" parent="Tutorial/PotHoleMsg"]
+offset_left = 297.0
+offset_top = 214.0
+offset_right = 937.0
+offset_bottom = 257.0
+text = "car broken down!"
+label_settings = SubResource("LabelSettings_pua3r")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Tutorial/PotHoleMsg"]
+offset_left = 306.0
+offset_top = 254.0
+offset_right = 745.0
+offset_bottom = 459.0
+text = "Your car has suddenly
+broken without warning.
+you must use an emergency 
+fund to pay the $100 worth of
+ repairs or risk
+going further into debt.
+"
+label_settings = SubResource("LabelSettings_nx7vw")
+
+[node name="DoneArrow" type="Sprite2D" parent="Tutorial/PotHoleMsg"]
+position = Vector2(891, 497)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("23_hkq8n")
+
+[node name="DoneArrowArea" type="Area2D" parent="Tutorial/PotHoleMsg/DoneArrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/PotHoleMsg/DoneArrow/DoneArrowArea"]
+position = Vector2(0.000488281, 0)
+shape = SubResource("RectangleShape2D_cwmxp")
+
+[node name="CarIcon" type="Sprite2D" parent="Tutorial/PotHoleMsg"]
+position = Vector2(832, 354)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("25_bsd53")
+
+[node name="ErrorMsg" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Bg" type="Panel" parent="Tutorial/ErrorMsg"]
+offset_left = 89.0
+offset_top = 566.0
+offset_right = 751.0
+offset_bottom = 642.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p06i5")
+
+[node name="Label" type="Label" parent="Tutorial/ErrorMsg"]
+offset_left = 103.0
+offset_top = 584.0
+offset_right = 743.0
+offset_bottom = 627.0
+text = "not enough gas."
+label_settings = SubResource("LabelSettings_pua3r")
+horizontal_alignment = 1
+
+[node name="DoneArrow" type="Sprite2D" parent="Tutorial/ErrorMsg"]
+position = Vector2(820, 603)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("23_hkq8n")
+
+[node name="DoneArrowArea" type="Area2D" parent="Tutorial/ErrorMsg/DoneArrow"]
+position = Vector2(45.0005, -95.0002)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/ErrorMsg/DoneArrow/DoneArrowArea"]
+position = Vector2(-60.001, 95.0005)
+shape = SubResource("RectangleShape2D_cwmxp")
+
+[connection signal="input_event" from="PlayerHouse/ArrowNext/ArrrowNextArea" to="." method="_on_arrow_next_input_event"]
+[connection signal="area_entered" from="House2/House2Area" to="." method="_on_house_2_area_entered"]
+[connection signal="area_exited" from="House2/House2Area" to="." method="_on_house_2_area_exited"]
+[connection signal="area_entered" from="House1/House1Area" to="." method="_on_house_1_area_entered"]
+[connection signal="area_exited" from="House1/House1Area" to="." method="_on_house_1_area_exited"]
+[connection signal="input_event" from="BankNode/BankExclaim/BankExclaimArea" to="." method="_on_bank_exclaim_area_input_event"]
+[connection signal="area_entered" from="House3/House3Area" to="." method="_on_house_3_area_area_entered"]
+[connection signal="area_exited" from="House3/House3Area" to="." method="_on_house_3_area_exited"]
+[connection signal="area_entered" from="FishShop/Area2D" to="." method="_on_fish_shop_area_entered"]
+[connection signal="area_exited" from="FishShop/Area2D" to="." method="_on_fish_shop_area_exited"]
+[connection signal="input_event" from="GasStationNode/GasExclaim/GasExclaimArea" to="." method="_on_gas_exclaim_area_input_event"]
+[connection signal="input_event" from="GasStationNode/GasBox/GasButton/GasPurchaseArea" to="." method="_on_gas_purchase_area_input_event"]
+[connection signal="input_event" from="Arrows/ArrowLeft/Area2D" to="." method="_on_arrow_left_input_event"]
+[connection signal="mouse_entered" from="Arrows/ArrowLeft/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="input_event" from="Arrows/ArrowRight/Area2D" to="." method="_on_arrow_right_input_event"]
+[connection signal="input_event" from="Arrows/ArrowUp/Area2D" to="." method="_on_arrow_up_input_event"]
+[connection signal="input_event" from="Arrows/ArrowDown/Area2D" to="." method="_on_arrow_down_input_event"]
+[connection signal="area_entered" from="SecretPothole" to="." method="_on_secret_pothole_area_entered"]
+[connection signal="input_event" from="Tutorial/FirstItem/DoneArrow/DoneArrowArea" to="." method="_on_done_arrow_area_input_event"]
+[connection signal="input_event" from="Tutorial/Tutorial5/DoneArrow/DoneArrowArea" to="." method="_on_tutorial5_arrow_area_input_event"]
+[connection signal="input_event" from="Tutorial/Tutorial7/DoneArrow/DoneArrowArea" to="." method="_on_tutorial7_area_input_event"]
+[connection signal="input_event" from="Tutorial/PotHoleMsg/DoneArrow/DoneArrowArea" to="." method="_on_pothole_arrow_area_input_event"]
+[connection signal="input_event" from="Tutorial/ErrorMsg/DoneArrow/DoneArrowArea" to="." method="_on_error_arrow_input_event"]

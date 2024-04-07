@@ -1,0 +1,477 @@
+[gd_scene load_steps=23 format=3 uid="uid://cpc3nu3426nl5"]
+
+[ext_resource type="Script" path="res://bank.gd" id="1_uvla4"]
+[ext_resource type="Texture2D" uid="uid://bgfbiojf4dpxu" path="res://src/bank_main_menu.png" id="2_a0i1u"]
+[ext_resource type="Texture2D" uid="uid://dm460t1kasmnf" path="res://src/loan_menu.png" id="3_e7a36"]
+[ext_resource type="Texture2D" uid="uid://d2f3d6do4lkq" path="res://src/check.png" id="4_7li1g"]
+[ext_resource type="Texture2D" uid="uid://cpfmmsb5woxmv" path="res://src/deposits_menu.png" id="5_y5w0g"]
+[ext_resource type="Texture2D" uid="uid://bw3bkx61cqmwm" path="res://payments_menu.png" id="6_2t2a6"]
+[ext_resource type="Texture2D" uid="uid://dp1l6ym82euhv" path="res://src/withdraws_menu.png" id="6_ngw0u"]
+[ext_resource type="Texture2D" uid="uid://jst0jkp001am" path="res://pay.png" id="7_78dmb"]
+[ext_resource type="FontFile" uid="uid://cwm6cj4w31np7" path="res://fonts/Notable/Notable-Regular.ttf" id="8_mtpbl"]
+[ext_resource type="Texture2D" uid="uid://i5vm3cd6mswm" path="res://src/arrow_next.png" id="9_qd6x5"]
+[ext_resource type="Texture2D" uid="uid://dan5iwdioxh01" path="res://src/gas_station.png" id="10_nl40d"]
+[ext_resource type="Texture2D" uid="uid://b15wu63x3fos1" path="res://src/broken_heart.png" id="10_o1an6"]
+[ext_resource type="Texture2D" uid="uid://i534eoxq6ml4" path="res://oh_no.png" id="13_kgtc3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6bxra"]
+font_size = 80
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5c2b1"]
+bg_color = Color(0.866667, 0.945098, 0.941176, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_7q73v"]
+font = ExtResource("8_mtpbl")
+font_size = 27
+font_color = Color(0, 0.580392, 0.545098, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0kjh8"]
+font = ExtResource("8_mtpbl")
+font_size = 20
+font_color = Color(0.537255, 0.733333, 0.721569, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ojh0e"]
+size = Vector2(499.999, 260)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i7kpo"]
+bg_color = Color(0.866667, 0.945098, 0.941176, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_38gcj"]
+font = ExtResource("8_mtpbl")
+font_size = 27
+font_color = Color(0, 0.580392, 0.545098, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ditg6"]
+font = ExtResource("8_mtpbl")
+font_size = 20
+font_color = Color(0.537255, 0.733333, 0.721569, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ib7nc"]
+size = Vector2(499.999, 260)
+
+[node name="bank" type="Node2D"]
+script = ExtResource("1_uvla4")
+
+[node name="BankMainMenu" type="Sprite2D" parent="."]
+position = Vector2(582, 331)
+scale = Vector2(0.332627, 0.284021)
+texture = ExtResource("2_a0i1u")
+
+[node name="loansButton" type="TextureButton" parent="BankMainMenu"]
+offset_left = -1383.33
+offset_top = 220.697
+offset_right = -809.327
+offset_bottom = 493.697
+
+[node name="PaymentsButton" type="TextureButton" parent="BankMainMenu"]
+offset_left = 912.0
+offset_top = 274.0
+offset_right = 1402.0
+offset_bottom = 499.0
+
+[node name="DepositsButton" type="TextureButton" parent="BankMainMenu"]
+offset_left = -661.0
+offset_top = 221.0
+offset_right = -57.0
+offset_bottom = 492.0
+
+[node name="ExitButton" type="TextureButton" parent="BankMainMenu"]
+offset_left = 1402.15
+offset_top = -1122.19
+offset_right = 1627.15
+offset_bottom = -894.188
+
+[node name="TextureButton" type="TextureButton" parent="BankMainMenu"]
+offset_left = 145.0
+offset_top = 231.0
+offset_right = 749.0
+offset_bottom = 498.0
+
+[node name="LoansNode" type="Node2D" parent="."]
+visible = false
+
+[node name="LoanMenu" type="Sprite2D" parent="LoansNode"]
+position = Vector2(576, 339)
+scale = Vector2(0.315214, 0.269215)
+texture = ExtResource("3_e7a36")
+
+[node name="confirmButton" type="TextureButton" parent="LoansNode"]
+offset_left = 1041.0
+offset_top = 33.0
+offset_right = 1117.0
+offset_bottom = 89.0
+
+[node name="Button" type="Button" parent="LoansNode"]
+offset_left = 851.0
+offset_top = 189.0
+offset_right = 950.0
+offset_bottom = 258.0
+
+[node name="Button2" type="Button" parent="LoansNode"]
+offset_left = 861.0
+offset_top = 503.0
+offset_right = 955.0
+offset_bottom = 578.0
+
+[node name="Button3" type="Button" parent="LoansNode"]
+offset_left = 856.0
+offset_top = 348.0
+offset_right = 949.0
+offset_bottom = 414.0
+
+[node name="Check2" type="Sprite2D" parent="LoansNode"]
+visible = false
+position = Vector2(921, 376)
+scale = Vector2(0.338384, 0.277778)
+texture = ExtResource("4_7li1g")
+
+[node name="Check3" type="Sprite2D" parent="LoansNode"]
+visible = false
+position = Vector2(926, 533)
+scale = Vector2(0.265151, 0.234178)
+texture = ExtResource("4_7li1g")
+
+[node name="Check" type="Sprite2D" parent="LoansNode"]
+visible = false
+position = Vector2(918, 211)
+scale = Vector2(0.249512, 0.360687)
+texture = ExtResource("4_7li1g")
+
+[node name="DepositsNode" type="Node2D" parent="."]
+visible = false
+
+[node name="DepositsMenu" type="Sprite2D" parent="DepositsNode"]
+position = Vector2(577.563, 312.25)
+scale = Vector2(0.310482, 0.272818)
+texture = ExtResource("5_y5w0g")
+
+[node name="Label" type="Label" parent="DepositsNode"]
+offset_left = 473.0
+offset_top = 190.0
+offset_right = 828.0
+offset_bottom = 297.0
+text = "0 "
+
+[node name="WithdrawsButton" type="TextureButton" parent="DepositsNode"]
+offset_left = 1040.0
+offset_top = 16.0
+offset_right = 1116.0
+offset_bottom = 72.0
+
+[node name="add10" type="TextureButton" parent="DepositsNode"]
+offset_left = 189.0
+offset_top = 463.0
+offset_right = 423.0
+offset_bottom = 548.0
+
+[node name="add11" type="TextureButton" parent="DepositsNode"]
+offset_left = 778.0
+offset_top = 457.0
+offset_right = 1030.0
+offset_bottom = 542.0
+
+[node name="add12" type="TextureButton" parent="DepositsNode"]
+offset_left = 487.0
+offset_top = 457.0
+offset_right = 721.0
+offset_bottom = 542.0
+
+[node name="PaymentsNode" type="Node2D" parent="."]
+visible = false
+
+[node name="PaymentsMenu" type="Sprite2D" parent="PaymentsNode"]
+position = Vector2(577, 325)
+scale = Vector2(0.311206, 0.266613)
+texture = ExtResource("6_2t2a6")
+
+[node name="Pay" type="Sprite2D" parent="PaymentsNode/PaymentsMenu"]
+position = Vector2(28.9196, 180.036)
+scale = Vector2(0.98678, 0.913882)
+texture = ExtResource("7_78dmb")
+
+[node name="PaymentsLabel" type="Label" parent="PaymentsNode/PaymentsMenu/Pay"]
+offset_left = -1006.22
+offset_top = -787.888
+offset_right = 1005.78
+offset_bottom = -224.888
+text = "Currently None"
+label_settings = SubResource("LabelSettings_6bxra")
+
+[node name="WithdrawsButton" type="TextureButton" parent="PaymentsNode"]
+offset_left = 1040.0
+offset_top = 16.0
+offset_right = 1116.0
+offset_bottom = 72.0
+
+[node name="WithdrawsNode" type="Node2D" parent="."]
+visible = false
+
+[node name="WithdrawsMenu" type="Sprite2D" parent="WithdrawsNode"]
+position = Vector2(574, 316)
+scale = Vector2(0.320875, 0.263811)
+texture = ExtResource("6_ngw0u")
+
+[node name="WithdrawsButton" type="TextureButton" parent="WithdrawsNode"]
+offset_left = 1040.0
+offset_top = 16.0
+offset_right = 1116.0
+offset_bottom = 72.0
+
+[node name="Label" type="Label" parent="WithdrawsNode"]
+offset_left = 473.0
+offset_top = 190.0
+offset_right = 828.0
+offset_bottom = 297.0
+text = "0 "
+
+[node name="x" type="TextureButton" parent="WithdrawsNode"]
+offset_left = 171.0
+offset_top = 435.0
+offset_right = 434.0
+offset_bottom = 527.0
+
+[node name="x1" type="TextureButton" parent="WithdrawsNode"]
+offset_left = 478.0
+offset_top = 431.0
+offset_right = 735.0
+offset_bottom = 537.0
+
+[node name="x2" type="TextureButton" parent="WithdrawsNode"]
+offset_left = 772.0
+offset_top = 442.0
+offset_right = 1072.0
+offset_bottom = 533.0
+
+[node name="Tutorial" type="Node2D" parent="."]
+
+[node name="Tutorial2" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Bg" type="Panel" parent="Tutorial/Tutorial2"]
+offset_left = 283.0
+offset_top = 202.0
+offset_right = 945.0
+offset_bottom = 462.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5c2b1")
+
+[node name="Label" type="Label" parent="Tutorial/Tutorial2"]
+offset_left = 297.0
+offset_top = 214.0
+offset_right = 937.0
+offset_bottom = 257.0
+text = "This is the bank!"
+label_settings = SubResource("LabelSettings_7q73v")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Tutorial/Tutorial2"]
+offset_left = 312.0
+offset_top = 258.0
+offset_right = 923.0
+offset_bottom = 463.0
+text = "To begin delivering, you must take out a
+loan to purchase gas. A loan is borrowed
+money that may be payed in increments to
+the bank. For each month, intrest 
+accumulates. this means the total amount
+required to pay increases by a percentage."
+label_settings = SubResource("LabelSettings_0kjh8")
+
+[node name="DoneArrow" type="Sprite2D" parent="Tutorial/Tutorial2"]
+position = Vector2(891, 497)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_qd6x5")
+
+[node name="DoneArrowArea" type="Area2D" parent="Tutorial/Tutorial2/DoneArrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/Tutorial2/DoneArrow/DoneArrowArea"]
+position = Vector2(0.000488281, 0)
+shape = SubResource("RectangleShape2D_ojh0e")
+
+[node name="Tutorial3" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Bg" type="Panel" parent="Tutorial/Tutorial3"]
+offset_left = 283.0
+offset_top = 202.0
+offset_right = 945.0
+offset_bottom = 462.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i7kpo")
+
+[node name="Label" type="Label" parent="Tutorial/Tutorial3"]
+offset_left = 297.0
+offset_top = 214.0
+offset_right = 937.0
+offset_bottom = 257.0
+text = "About loans."
+label_settings = SubResource("LabelSettings_38gcj")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Tutorial/Tutorial3"]
+offset_left = 312.0
+offset_top = 258.0
+offset_right = 923.0
+offset_bottom = 463.0
+text = "For example, a  $100, 5 day loan with 10%
+ interest, would after 5 days cost you a 
+total of $161.
+
+Select the loan with the best rate and
+time."
+label_settings = SubResource("LabelSettings_ditg6")
+
+[node name="DoneArrow" type="Sprite2D" parent="Tutorial/Tutorial3"]
+position = Vector2(891, 497)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_qd6x5")
+
+[node name="DoneArrowArea" type="Area2D" parent="Tutorial/Tutorial3/DoneArrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/Tutorial3/DoneArrow/DoneArrowArea"]
+position = Vector2(0.000488281, 0)
+shape = SubResource("RectangleShape2D_ib7nc")
+
+[node name="Tutorial4" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Bg" type="Panel" parent="Tutorial/Tutorial4"]
+offset_left = 283.0
+offset_top = 202.0
+offset_right = 945.0
+offset_bottom = 462.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i7kpo")
+
+[node name="Label" type="Label" parent="Tutorial/Tutorial4"]
+offset_left = 297.0
+offset_top = 214.0
+offset_right = 937.0
+offset_bottom = 257.0
+text = "Great decision!"
+label_settings = SubResource("LabelSettings_38gcj")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Tutorial/Tutorial4"]
+offset_left = 312.0
+offset_top = 258.0
+offset_right = 923.0
+offset_bottom = 463.0
+text = "You now have a loan!
+Visit the gas station to
+fill up! Make sure that you 
+return to the bank every 
+day to make the minimum 
+payments."
+label_settings = SubResource("LabelSettings_ditg6")
+
+[node name="DoneArrow" type="Sprite2D" parent="Tutorial/Tutorial4"]
+position = Vector2(891, 497)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_qd6x5")
+
+[node name="DoneArrowArea" type="Area2D" parent="Tutorial/Tutorial4/DoneArrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/Tutorial4/DoneArrow/DoneArrowArea"]
+position = Vector2(0.000488281, 0)
+shape = SubResource("RectangleShape2D_ib7nc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Tutorial/Tutorial4"]
+position = Vector2(801, 358)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("10_nl40d")
+
+[node name="ErrorTutorial" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Bg" type="Panel" parent="Tutorial/ErrorTutorial"]
+offset_left = 283.0
+offset_top = 202.0
+offset_right = 945.0
+offset_bottom = 462.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i7kpo")
+
+[node name="Label" type="Label" parent="Tutorial/ErrorTutorial"]
+offset_left = 297.0
+offset_top = 214.0
+offset_right = 937.0
+offset_bottom = 257.0
+text = "Poor financial decision!"
+label_settings = SubResource("LabelSettings_38gcj")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Tutorial/ErrorTutorial"]
+offset_left = 312.0
+offset_top = 258.0
+offset_right = 923.0
+offset_bottom = 463.0
+text = "Your Buisness has not 
+yet started. It is not 
+a smart financial decision
+to take out a large loan
+with high interest.
+Try again!"
+label_settings = SubResource("LabelSettings_ditg6")
+
+[node name="DoneArrow" type="Sprite2D" parent="Tutorial/ErrorTutorial"]
+position = Vector2(891, 497)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_qd6x5")
+
+[node name="DoneArrowArea" type="Area2D" parent="Tutorial/ErrorTutorial/DoneArrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/ErrorTutorial/DoneArrow/DoneArrowArea"]
+position = Vector2(0.000488281, 0)
+shape = SubResource("RectangleShape2D_ib7nc")
+
+[node name="Heart" type="Sprite2D" parent="Tutorial/ErrorTutorial"]
+position = Vector2(797, 340)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_o1an6")
+
+[node name="OhNo" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(578, 359)
+scale = Vector2(0.50646, 0.528345)
+texture = ExtResource("13_kgtc3")
+
+[node name="OhNoButton" type="TextureButton" parent="OhNo"]
+offset_left = -324.0
+offset_top = 280.0
+offset_right = 300.0
+offset_bottom = 441.0
+
+[connection signal="pressed" from="BankMainMenu/loansButton" to="." method="_on_loans_button_pressed"]
+[connection signal="pressed" from="BankMainMenu/PaymentsButton" to="." method="_on_payments_button_pressed"]
+[connection signal="pressed" from="BankMainMenu/DepositsButton" to="." method="_on_deposits_button_pressed"]
+[connection signal="pressed" from="BankMainMenu/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="BankMainMenu/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="LoansNode/confirmButton" to="." method="_on_confirm_button_pressed"]
+[connection signal="pressed" from="LoansNode/confirmButton" to="." method="_on_withdraws_button_pressed"]
+[connection signal="pressed" from="LoansNode/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="LoansNode/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="LoansNode/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="DepositsNode/WithdrawsButton" to="." method="_on_withdraws_button_pressed"]
+[connection signal="pressed" from="DepositsNode/add10" to="." method="_on_add_10_pressed"]
+[connection signal="pressed" from="DepositsNode/add11" to="." method="_on_add_11_pressed"]
+[connection signal="pressed" from="DepositsNode/add12" to="." method="_on_add_12_pressed"]
+[connection signal="pressed" from="PaymentsNode/WithdrawsButton" to="." method="_on_withdraws_button_pressed"]
+[connection signal="pressed" from="WithdrawsNode/WithdrawsButton" to="." method="_on_withdraws_button_pressed"]
+[connection signal="pressed" from="WithdrawsNode/x" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="WithdrawsNode/x" to="." method="_on_x_pressed"]
+[connection signal="pressed" from="WithdrawsNode/x1" to="." method="_on_x_1_pressed"]
+[connection signal="pressed" from="WithdrawsNode/x2" to="." method="_on_x_2_pressed"]
+[connection signal="input_event" from="Tutorial/Tutorial2/DoneArrow/DoneArrowArea" to="." method="_on_done_arrow2_area_input_event"]
+[connection signal="input_event" from="Tutorial/Tutorial3/DoneArrow/DoneArrowArea" to="." method="_on_done_arrow3_area_input_event"]
+[connection signal="input_event" from="Tutorial/Tutorial4/DoneArrow/DoneArrowArea" to="." method="_on_tutorial4_arrow_area_input_event"]
+[connection signal="input_event" from="Tutorial/ErrorTutorial/DoneArrow/DoneArrowArea" to="." method="_on_error_arrow_area_input_event"]
+[connection signal="pressed" from="OhNo/OhNoButton" to="." method="_on_oh_no_button_pressed"]

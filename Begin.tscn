@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1j8fbtwdtm4y"]
+
+[ext_resource type="Script" path="res://begin.gd" id="1_eoeec"]
+[ext_resource type="Texture2D" uid="uid://1tqxs8jn66dk" path="res://src/Play.png" id="2_nnwwa"]
+
+[node name="Begin" type="Node2D"]
+script = ExtResource("1_eoeec")
+
+[node name="Play" type="Sprite2D" parent="."]
+position = Vector2(588.953, 328.63)
+scale = Vector2(0.130952, 0.123866)
+texture = ExtResource("2_nnwwa")
+
+[node name="TextureButton" type="TextureButton" parent="Play"]
+offset_left = -1247.71
+offset_top = 430.866
+offset_right = 1590.29
+offset_bottom = 1762.87
+tooltip_text = "Play the game"
+
+[connection signal="pressed" from="Play/TextureButton" to="." method="_on_texture_button_pressed"]

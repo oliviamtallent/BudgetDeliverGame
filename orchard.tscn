@@ -1,0 +1,342 @@
+[gd_scene load_steps=29 format=3 uid="uid://dbu7xeiqr5tl1"]
+
+[ext_resource type="Texture2D" uid="uid://87neoc0vpqkp" path="res://src/bottom_orchard.png" id="1_lw6bm"]
+[ext_resource type="Script" path="res://orchard.gd" id="1_olqg4"]
+[ext_resource type="Texture2D" uid="uid://b6ms0hr6scrg7" path="res://src/tree.png" id="2_ddpnj"]
+[ext_resource type="Texture2D" uid="uid://5tatvha84lca" path="res://src/pail.png" id="3_8rlbe"]
+[ext_resource type="Texture2D" uid="uid://2fpiu5vkqmj2" path="res://src/round_box_button.png" id="4_p0kfr"]
+[ext_resource type="FontFile" uid="uid://cwm6cj4w31np7" path="res://fonts/Notable/Notable-Regular.ttf" id="5_b5vhv"]
+[ext_resource type="Texture2D" uid="uid://bst324s2upxns" path="res://src/basket.png" id="7_tlyf6"]
+[ext_resource type="Texture2D" uid="uid://bfilsxubftv0b" path="res://src/top_bar.png" id="8_dnotv"]
+[ext_resource type="Texture2D" uid="uid://xom5y24bndij" path="res://src/apple.png" id="8_ujcd0"]
+[ext_resource type="Texture2D" uid="uid://i5vm3cd6mswm" path="res://src/arrow_next.png" id="10_tmg46"]
+[ext_resource type="Texture2D" uid="uid://6n4idqik4s4l" path="res://src/exclaim.png" id="11_fsyjr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjvss"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4w0p"]
+size = Vector2(340, 105)
+
+[sub_resource type="LabelSettings" id="LabelSettings_didd1"]
+font = ExtResource("5_b5vhv")
+font_size = 25
+font_color = Color(0.866667, 0.945098, 0.941176, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_f7yq0"]
+font = ExtResource("5_b5vhv")
+font_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sytan"]
+bg_color = Color(0.866667, 0.945098, 0.941176, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_c23oy"]
+font = ExtResource("5_b5vhv")
+font_size = 25
+font_color = Color(0.537255, 0.733333, 0.721569, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ml1r"]
+size = Vector2(188, 58)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ywiv2"]
+bg_color = Color(0.537255, 0.733333, 0.721569, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_c2l2a"]
+font = ExtResource("5_b5vhv")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_sldeu"]
+font = ExtResource("5_b5vhv")
+font_size = 30
+font_color = Color(0, 0.580392, 0.545098, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_d0dfs"]
+font = ExtResource("5_b5vhv")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_a66hg"]
+font = ExtResource("5_b5vhv")
+font_size = 30
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iplls"]
+size = Vector2(496, 264)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1djhq"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_yc3ci"]
+font = ExtResource("5_b5vhv")
+font_size = 27
+font_color = Color(0, 0.580392, 0.545098, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qhltp"]
+font = ExtResource("5_b5vhv")
+font_size = 20
+font_color = Color(0.537255, 0.733333, 0.721569, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vmt2"]
+size = Vector2(499.999, 260)
+
+[node name="Orchard" type="Node2D"]
+script = ExtResource("1_olqg4")
+
+[node name="BackgroundSolid" type="ColorRect" parent="."]
+process_mode = 4
+offset_right = 1152.0
+offset_bottom = 642.0
+color = Color(0.866667, 0.945098, 0.941176, 1)
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(563, 368)
+scale = Vector2(0.63, 0.63)
+texture = ExtResource("1_lw6bm")
+
+[node name="WaterPurchase" type="Node2D" parent="."]
+
+[node name="WaterBackground" type="Panel" parent="WaterPurchase"]
+process_mode = 4
+offset_left = 882.0
+offset_top = 117.0
+offset_right = 1111.0
+offset_bottom = 441.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rjvss")
+
+[node name="Pail" type="Sprite2D" parent="WaterPurchase"]
+position = Vector2(998, 257)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("3_8rlbe")
+
+[node name="PurchaseBtn" type="Sprite2D" parent="WaterPurchase"]
+position = Vector2(996, 403)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_p0kfr")
+
+[node name="WaterPurchaseArea" type="Area2D" parent="WaterPurchase/PurchaseBtn"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterPurchase/PurchaseBtn/WaterPurchaseArea"]
+position = Vector2(-0.000488281, -0.000183105)
+shape = SubResource("RectangleShape2D_y4w0p")
+
+[node name="BuyLabel" type="Label" parent="WaterPurchase"]
+offset_left = 960.0
+offset_top = 383.0
+offset_right = 1030.0
+offset_bottom = 419.0
+text = "Buy!"
+label_settings = SubResource("LabelSettings_didd1")
+
+[node name="Label" type="Label" parent="WaterPurchase"]
+offset_left = 981.0
+offset_top = 315.0
+offset_right = 1021.0
+offset_bottom = 351.0
+text = "$3"
+label_settings = SubResource("LabelSettings_f7yq0")
+
+[node name="Trees" type="Node2D" parent="."]
+
+[node name="Tree2" type="Sprite2D" parent="Trees"]
+position = Vector2(335, 281)
+texture = ExtResource("2_ddpnj")
+
+[node name="Tree1" type="Sprite2D" parent="Trees"]
+position = Vector2(241, 310)
+texture = ExtResource("2_ddpnj")
+
+[node name="Tree3" type="Sprite2D" parent="Trees"]
+position = Vector2(457, 315)
+texture = ExtResource("2_ddpnj")
+
+[node name="Basket" type="Sprite2D" parent="."]
+position = Vector2(121, 529)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_tlyf6")
+
+[node name="BasketArea" type="Area2D" parent="Basket"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Basket/BasketArea"]
+polygon = PackedVector2Array(-232.5, -32.5, -162.5, 222.5, 162.5, 225, 242.5, -30)
+
+[node name="CollectBtn" type="Panel" parent="."]
+process_mode = 4
+offset_left = 33.0
+offset_top = 538.0
+offset_right = 214.0
+offset_bottom = 594.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sytan")
+
+[node name="Label" type="Label" parent="CollectBtn"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 10.0
+offset_right = 180.0
+offset_bottom = 46.0
+text = "Collect!"
+label_settings = SubResource("LabelSettings_c23oy")
+horizontal_alignment = 1
+
+[node name="CollectBtnArea" type="Area2D" parent="CollectBtn"]
+process_mode = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectBtn/CollectBtnArea"]
+position = Vector2(91, 29)
+shape = SubResource("RectangleShape2D_5ml1r")
+
+[node name="Timer" type="Panel" parent="."]
+visible = false
+offset_left = 978.0
+offset_top = 107.0
+offset_right = 1132.0
+offset_bottom = 156.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ywiv2")
+
+[node name="Label" type="Label" parent="Timer"]
+layout_mode = 0
+offset_right = 153.0
+offset_bottom = 48.0
+text = "00:00
+"
+label_settings = SubResource("LabelSettings_c2l2a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Apple" type="Sprite2D" parent="Timer"]
+position = Vector2(57, 93)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_ujcd0")
+
+[node name="AppleLabel" type="Label" parent="Timer"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 72.0
+offset_right = 138.0
+offset_bottom = 115.0
+text = "0"
+label_settings = SubResource("LabelSettings_sldeu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BarNode" type="Node2D" parent="."]
+
+[node name="Bar" type="Sprite2D" parent="BarNode"]
+position = Vector2(575, 326)
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("8_dnotv")
+
+[node name="MoneyLabel" type="Label" parent="BarNode"]
+offset_left = 84.0
+offset_top = 28.0
+offset_right = 204.0
+offset_bottom = 71.0
+text = "$00.00"
+label_settings = SubResource("LabelSettings_d0dfs")
+
+[node name="GasLabel" type="Label" parent="BarNode"]
+offset_left = 328.0
+offset_top = 28.0
+offset_right = 448.0
+offset_bottom = 71.0
+text = "5
+"
+label_settings = SubResource("LabelSettings_d0dfs")
+
+[node name="Apple" type="Sprite2D" parent="BarNode"]
+position = Vector2(460, 47)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_ujcd0")
+
+[node name="AppleLabel" type="Label" parent="BarNode"]
+offset_left = 510.0
+offset_top = 26.0
+offset_right = 630.0
+offset_bottom = 69.0
+text = "5
+"
+label_settings = SubResource("LabelSettings_a66hg")
+metadata/_edit_use_anchors_ = true
+
+[node name="ArrowBack" type="Sprite2D" parent="."]
+position = Vector2(1060, 579)
+rotation = 3.14159
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_tmg46")
+
+[node name="BackArrowArea" type="Area2D" parent="ArrowBack"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowBack/BackArrowArea"]
+position = Vector2(4, 0)
+shape = SubResource("RectangleShape2D_iplls")
+
+[node name="Tutorial" type="Node2D" parent="."]
+
+[node name="Tutorial6" type="Node2D" parent="Tutorial"]
+visible = false
+
+[node name="Bg" type="Panel" parent="Tutorial/Tutorial6"]
+offset_left = 283.0
+offset_top = 202.0
+offset_right = 945.0
+offset_bottom = 462.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1djhq")
+
+[node name="Label" type="Label" parent="Tutorial/Tutorial6"]
+offset_left = 297.0
+offset_top = 214.0
+offset_right = 937.0
+offset_bottom = 257.0
+text = "Apples secured!"
+label_settings = SubResource("LabelSettings_yc3ci")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Tutorial/Tutorial6"]
+offset_left = 312.0
+offset_top = 258.0
+offset_right = 923.0
+offset_bottom = 463.0
+text = "All that is left is to
+begin completing orders!
+Be sure to save money, in 
+the bank, you never know 
+when an emergency 
+could come up."
+label_settings = SubResource("LabelSettings_qhltp")
+
+[node name="TutorialDoneArrow" type="Sprite2D" parent="Tutorial/Tutorial6"]
+position = Vector2(891, 497)
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_tmg46")
+
+[node name="DoneArrowArea" type="Area2D" parent="Tutorial/Tutorial6/TutorialDoneArrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial/Tutorial6/TutorialDoneArrow/DoneArrowArea"]
+position = Vector2(0.000488281, 0)
+shape = SubResource("RectangleShape2D_8vmt2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Tutorial/Tutorial6"]
+position = Vector2(796, 344)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_fsyjr")
+
+[connection signal="area_entered" from="Basket/BasketArea" to="." method="_on_basket_area_entered"]
+[connection signal="input_event" from="Basket/BasketArea" to="." method="_on_basket_area_input_event"]
+[connection signal="input_event" from="CollectBtn/CollectBtnArea" to="." method="_on_collect_btn_area_input_event"]
+[connection signal="input_event" from="ArrowBack/BackArrowArea" to="." method="_on_back_arrow_area_input_event"]
+[connection signal="input_event" from="Tutorial/Tutorial6/TutorialDoneArrow/DoneArrowArea" to="." method="_on_tutorial6_arrow_area_input_event"]

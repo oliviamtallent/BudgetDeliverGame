@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbugnac0ptrv2"]
+
+[ext_resource type="Texture2D" uid="uid://xom5y24bndij" path="res://src/apple.png" id="1_n58go"]
+
+[node name="Apple" type="Node2D"]
+scale = Vector2(0.35, 0.35)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_n58go")
+
+[node name="AppleArea" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AppleArea"]
+polygon = PackedVector2Array(-64, 129, -123, -28, -113, -77, -78, -96, -51, -123, 23, -123, 118, -68, 122, -28, 72, 119, 20, 134)
