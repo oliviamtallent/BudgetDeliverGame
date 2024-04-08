@@ -1,0 +1,1 @@
+This game is designed to teach all about budgeting skills. We lowkey struggled with this github sycning thing across different projects so that is why we made like 50 seperate versions of this reposititory each for different changes
